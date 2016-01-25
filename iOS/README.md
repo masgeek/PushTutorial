@@ -162,7 +162,7 @@ To register the current device for push, call `UIApplication`'s `registerForRemo
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
     ...
-    let userNotificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+    let userNotificationTypes: UIUserNotificationType = [.Alert, .Badge, .Sound]
     let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
     application.registerUserNotificationSettings(settings)
     application.registerForRemoteNotifications()
